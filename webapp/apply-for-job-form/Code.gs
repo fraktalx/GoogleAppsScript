@@ -1,7 +1,8 @@
 /* The script is deployed as a web app and renders the form */
 function doGet(e) {
   return HtmlService
-    .createHtmlOutputFromFile('Form')
+  .createHtmlOutputFromFile('Form')
+  .setXFrameOptionsMode(HtmlService.XFrameOptionsMode.ALLOWALL)
     .setTitle("SET-YOUR-PAGE-TITLE");
 }
 
